@@ -1,3 +1,36 @@
+## Narrator as a Mod for Minetest
+
+This is an adaption of [narrator](https://github.com/astrochili/narrator) as a mod for the game(engine) [Minetest](https://www.minetest.net/).
+
+For best results, install the mod [yl\_speak\_up](https://forum.minetest.net/viewtopic.php?t=30181) and [npc\_talk](https://forum.minetest.net/viewtopic.php?t=30182) in your game/world as well.
+
+As Minetest mods cannot use `require`, some modifications to the original [narrator](https://github.com/astrochili/narrator) had to be done.
+
+
+### Converting Ink stories so that they can be used with the mod
+
+With `lua ink2lua.lua name_of_game` you can convert files in your `stories/` folder from `name_of_game.ink` format to a `name_of_game.lua` format  which can then be run and used in this mod.
+
+### Using as a mod
+
+Just use this as a mod and adjust the table `narrator.book_list` so that it contains a list of all your games in the `stories/` folder (the `.lua` extension will be added automaticly):
+```lua
+narrator.book_list = {"game"}
+```
+
+There are two ways to play the story in your game.
+
+The first option is to use the chatcommand `/ink`. It will list all games that you have added to `narrator.book_list` above and allow you to run them. Type i.e. `/ink 4` to select option/answer 4 in the game. Just typing `/ink` repeats the last text.
+
+The second option is to use the `yl_speak_up` mod and add a dialog that points to `d_dynamic` to your NPC. Dynamic dialogs are currently beeing developped for `yl_speak_up`. Please use (for now) the branch `split_core_and_editor` in order to be able to use this feature!
+
+### Running from a shell, outside Minetest
+
+Use `lua run_from_shell.lua name_of_game` instead of `game.lua` if you want to run a game interactively on the command line. This is useful for testing your stories.
+
+
+
+
 ![logo](https://user-images.githubusercontent.com/4752473/85455900-141f8f80-b5a7-11ea-8cd7-b441d662b361.png)
 
 # Narrator

@@ -5,3 +5,7 @@ Thumbs.db
 # Defold
 /.internal
 /build
+
+/.gitignore
+*~
+*.save*

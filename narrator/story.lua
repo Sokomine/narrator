@@ -1,10 +1,10 @@
 --
 -- Dependencies
 
-local classic = require('narrator.libs.classic')
-local lume = require('narrator.libs.lume')
-local enums = require('narrator.enums')
-local list_mt = require('narrator.list.mt')
+local classic = narrator.classic
+local lume = narrator.lume
+local enums = narrator.enums
+local list_mt = narrator.list_mt
 
 --
 -- Story
