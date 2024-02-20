@@ -1,6 +1,6 @@
 ## Narrator as a Mod for Minetest
 
-This is an adaption of [narrator](https://github.com/astrochili/narrator) as a mod for the game(engine) [Minetest](https://www.minetest.net/).
+This is an adaption (or rather: a small wrapper) of [narrator](https://github.com/astrochili/narrator) as a mod for the game(engine) [Minetest](https://www.minetest.net/).
 
 For best results, install the mod [yl\_speak\_up](https://forum.minetest.net/viewtopic.php?t=30181) and [npc\_talk](https://forum.minetest.net/viewtopic.php?t=30182) in your game/world as well.
 
@@ -26,9 +26,9 @@ The second option is to use the `yl_speak_up` mod and add a dialog that points t
 
 ### Running from a shell, outside Minetest
 
-Use `lua run_from_shell.lua name_of_game` instead of `game.lua` if you want to run a game interactively on the command line. This is useful for testing your stories.
+Use `lua run_from_shell.lua name_of_game` instead of the original `lua game.lua` if you want to run a game interactively on the command line. This is useful for testing your stories.
 
-
+# Original documentation
 
 
 ![logo](https://user-images.githubusercontent.com/4752473/85455900-141f8f80-b5a7-11ea-8cd7-b441d662b361.png)
